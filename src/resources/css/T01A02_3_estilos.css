@@ -8,3 +8,13 @@ and open the template in the editor.
     Author     : jose
 */
 
+.root {
+    -fx-background-image: url("/resources/images/fondoPantalla01.jpg");
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-font-wight: bold;
+    -fx-text-fill: #333333;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 0, 0, 0, 1);
+}

@@ -93,6 +93,8 @@ public class T01A02_3_FancyForms extends Application {
         Scene scene = new Scene(grid, 325, 300);
         primaryStage.setScene(scene);
         
+        // Enlazamos la hoja de estilos en cascada (CSS - Cascading Style Sheet)
+        scene.getStylesheets().add("/resources/css/T01A02_3_estilos.css");
         
         // Con esta funcion, se pueden visualizar las lineas de la cuadricula grid
         // grid.setGridLinesVisible(true);
