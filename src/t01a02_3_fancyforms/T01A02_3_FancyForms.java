@@ -18,9 +18,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
+//import javafx.scene.paint.Color;
+//import javafx.scene.text.Font;
+//import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -43,7 +43,8 @@ public class T01A02_3_FancyForms extends Application {
 
         // Le damos titulo a la escena y lo añadimos al Grid
         Text scenetitle = new Text("Welcome");
-        scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+        // Añadimos ID para el titulo, para refernciarlo desde el css
+        scenetitle.setId("welcome-text");
         grid.add(scenetitle, 0, 0, 2, 1);
         
         // Creamos la etiqueta para el nombre de usuario y la añadimos al gridPane
@@ -77,6 +78,8 @@ public class T01A02_3_FancyForms extends Application {
         // Control de texto para mostrar mensaje
         final Text actiontarget = new Text();
         grid.add(actiontarget, 1, 6);
+        // Asignamos ID al nodo para referenciarlo en la hoja de estilos
+        actiontarget.setId("actiontarget");
         
         // Añadimos el escuchador (manejador) de eventos para darle utilidad al boton
         // Metodo .setOnAction() se usa para registrar un handler (controlador de eventos)
@@ -84,13 +87,12 @@ public class T01A02_3_FancyForms extends Application {
         btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent e){
-                actiontarget.setFill(Color.FIREBRICK);
                 actiontarget.setText("Sign in button pressed");
             }
         });
         
         // Codigo para crear la escena (Ponemos mas para ver bien el label User Name
-        Scene scene = new Scene(grid, 325, 300);
+        Scene scene = new Scene(grid, 1920, 1080);
         primaryStage.setScene(scene);
         
         // Enlazamos la hoja de estilos en cascada (CSS - Cascading Style Sheet)
