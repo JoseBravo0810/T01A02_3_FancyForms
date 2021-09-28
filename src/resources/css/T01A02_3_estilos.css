@@ -8,10 +8,12 @@ and open the template in the editor.
     Author     : jose
 */
 
+/* Añadimos estilo al fondo, una imagen */
 .root {
     -fx-background-image: url("/resources/images/fondoPantalla01.jpg");
 }
 
+/* Añadimos estilo a las etiquetas */
 .label {
     -fx-font-size: 12px;
     -fx-font-wight: bold;
@@ -19,6 +21,7 @@ and open the template in the editor.
     -fx-effect: dropshadow(gaussian, rgba(72, 107, 235, 0.85), 0, 0, 0, 1);
 }
 
+/* Añadimos estilo al Welcome */
 #welcome-text {
     -fx-font-size: 32px;
     -fx-font-family: "Arial Black";
@@ -26,8 +29,23 @@ and open the template in the editor.
     -fx-effect: innershadow(three-pass-box, rgba(0, 0, 0, 0.7), 6, 0.0, 0, 2);
 }
 
+/* Añadimos estilo al targetaction */
 #actiontarget {
     -fx-fill: #FF2D2D;
     -fx-font-weight: bold;
     -fx-effect: dropshadow(gaussian, rgba(232, 98, 98, 0.8), 0, 0, 0, 1);
+}
+
+/* Añadimos estilo al boton */
+.button {
+    -fx-text-fill: yellow;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: linear-gradient(#61a2b1, #2A5058);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+}
+
+/* Estilo del boton presionado */
+.button:hover{
+    -fx-background-color: linear-gradient(#2A5058, #61a2b1)
 }
